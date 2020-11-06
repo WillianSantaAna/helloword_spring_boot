@@ -15,7 +15,7 @@ public class JavaTesterController {
 
     @GetMapping(path = "/access/{student}/{covid}", produces = MediaType.APPLICATION_JSON_VALUE)
     public boolean getGreeting(@PathVariable("student") boolean isStudent, @PathVariable("covid") boolean hasCovid) {
-        return isStudent && hasCovid;
+        return isStudent && !hasCovid;
     }
 
     @GetMapping(path = "/required/{student}/{temperature}/{classType}", produces = MediaType.APPLICATION_JSON_VALUE)
